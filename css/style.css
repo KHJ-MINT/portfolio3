@@ -1,0 +1,153 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: '나눔고딕', sans-serif;
+    background: #333;
+    color: #ddd;
+}
+#back {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/bgLine.png') left top;
+    opacity: 0.2;
+    position: relative;
+}
+header {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header h1 {
+    width: 400px;
+    height: 80px;
+}
+header h1 img {
+    width: 100%;
+}
+nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 21;
+}
+nav > ul {
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+nav > ul > li {
+    width: 16%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+nav > ul > li > div {
+    position: absolute;
+    top: -50px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #000;
+    transition: 0.5s;
+    opacity: 0;
+}
+nav > ul > li > div ul li:hover {
+    background: #000;
+}
+nav > ul > li:nth-child(1) > div {
+    left: 6%;
+}
+nav > ul > li:nth-child(2) > div {
+    left: 22%;
+}
+nav > ul > li:nth-child(3) > div {
+    left: 39%;
+}
+nav > ul > li:nth-child(4) > div {
+    left: 55%;
+}
+nav > ul > li:nth-child(5) > div {
+    left: 70%;
+}
+nav > ul > li:nth-child(6) > div {
+    left: 87%;
+}
+nav > ul > li > a {
+    position: absolute;
+    transition: 0.5s;
+}
+/* nav > ul > li:nth-child(1) > a {
+    left: 16.5%;
+}
+nav > ul > li:nth-child(2) > a {
+    left: 33%;
+}
+nav > ul > li:nth-child(3) > a {
+    left: 49.5%;
+}
+nav > ul > li:nth-child(4) > a {
+    left: 66%;
+}
+nav > ul > li:nth-child(5) > a {
+    left: 82.5%;
+}
+nav > ul > li:nth-child(6) > a {
+    left: 99%;
+} */
+nav > ul > li:hover > a {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+nav > ul > li:hover > div {
+    opacity: 1;
+    top: -130px;
+    transform: rotateY(360deg);
+}
+nav > ul > li > div > div img {
+    width: 200px;
+    height: 120px;
+}
+section {
+    width: 100%;
+    height: 490px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+section img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: -10px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+footer ul {
+    display: flex;
+}
